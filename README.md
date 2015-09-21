@@ -237,5 +237,7 @@ system.time( OUT.GLS<-GWAS.GLS(y=y,X=X,G=G,vU=.5,vE=.5,verbose=F) )
 EVD<-eigen(G)
 system.time( OUT.GLS2<-GWAS.GLS.fast(y=y,X=X,V=EVD$vectors,d=EVD$values,vU=.5,vE=.5,verbose=F) )
 
- system.time( OUT.GLS3<-GWAS.GLS.fast2(y=y,X=X,V=EVD$vectors,d=EVD$values,vU=.5,vE=.5,verbose=F,getContrasts=function(x){    
+ system.time( OUT.GLS3<-GWAS.GLS.fast2(y=y,X=X,V=EVD$vectors,d=EVD$values,vU=.5,vE=.5,verbose=F,
+                                            getContrasts=function(x){ return(x) } 
+                                       )
  ```
