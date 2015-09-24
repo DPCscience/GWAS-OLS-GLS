@@ -159,7 +159,7 @@ GWAS.GLS<-function(y,W=NULL,X,G,vU,vE,verbose=F){
 
 ```R
 GWAS.GLS.eig2<-function(y,W=NULL,X,G=NULL,V=NULL,d=NULL,vU,vE,verbose=F,
-                        getContrasts,bruteForce=T){
+                        getContrasts=function(x){ return(x) },bruteForce=T){
     ##  GLS eith eigenvectors
     #X'[VDV'D*vG+IvE]^-1X=X'V[D*k+I]^-1V'X/vE
     # Z=SV'X  where S=diag(1/sqrt(d*vG+vE))
