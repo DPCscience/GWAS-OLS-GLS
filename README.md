@@ -158,7 +158,8 @@ GWAS.GLS<-function(y,W=NULL,X,G,vU,vE,verbose=F){
 ### 5) GLS Using eigenvectors and a general interface for contrasts 
 
 ```R
-GWAS.GLS.eig2<-function(y,W=NULL,X,G=NULL,V=NULL,d=NULL,vU,vE,verbose=F,getContrasts,bruteForce=T){
+GWAS.GLS.eig2<-function(y,W=NULL,X,G=NULL,V=NULL,d=NULL,vU,vE,verbose=F,
+                        getContrasts,bruteForce=T){
     ##  GLS eith eigenvectors
     #X'[VDV'D*vG+IvE]^-1X=X'V[D*k+I]^-1V'X/vE
     # Z=SV'X  where S=diag(1/sqrt(d*vG+vE))
